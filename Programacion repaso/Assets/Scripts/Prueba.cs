@@ -19,3 +19,18 @@ public class Animal : MonoBehaviour
     }
 }
 
+public class Perro : Animal
+{
+    // Método que se ejecuta al inicio (parte de la herencia)
+    private void Start()
+    {
+        Nombre = "Perro";
+    }
+
+    // Polimorfismo: Sobrescribir el método EmitirSonido
+    public override void EmitirSonido(string sonido)
+    {
+        Debug.Log($"{Nombre} ladra: {sonido}");
+    }
+}
+
