@@ -6,14 +6,12 @@ public class Animal : MonoBehaviour
 {
     public string Nombre { get; set; }
 
-    // Constructor de la clase Animal (inicialización en Awake)
     private void Awake()
     {
         Nombre = "Animal";
     }
 
-    // Método que utiliza un parámetro
-    public void EmitirSonido(string sonido)
+    public virtual void EmitirSonido(string sonido)
     {
         Debug.Log($"{Nombre} emite el sonido: {sonido}");
     }
@@ -34,3 +32,14 @@ public class Perro : Animal
     }
 }
 
+public class Ejemplo : MonoBehaviour
+{
+    private void Start()
+    {
+        // Crear una instancia de Perro (uso del constructor)
+        Perro miPerro = new Perro();
+
+        // Llamar al método EmitirSonido utilizando polimorfismo
+        miPerro.EmitirSonido("¡Guau guau!");  // Uso del método y el parámetro
+    }
+}
