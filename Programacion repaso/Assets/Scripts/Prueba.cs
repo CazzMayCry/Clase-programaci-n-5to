@@ -6,8 +6,7 @@ public class Animal : MonoBehaviour
 {
     public string Nombre { get; set; }
 
-    // Constructor de la clase Animal (no es común en Unity)
-    // Se inicializa en Awake() por convención
+    // Constructor de la clase Animal (inicialización en Awake)
     private void Awake()
     {
         Nombre = "Animal";
@@ -19,3 +18,4 @@ public class Animal : MonoBehaviour
         Debug.Log($"{Nombre} emite el sonido: {sonido}");
     }
 }
+
